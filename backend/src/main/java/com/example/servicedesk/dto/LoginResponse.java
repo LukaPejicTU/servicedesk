@@ -1,2 +1,4 @@
-package com.example.servicedesk.dto;public record LoginResponse() {
+package com.example.servicedesk.dto;
+
+public record LoginResponse(String token) {
 }
