@@ -1,1 +1,29 @@
-<p>ticket-list works!</p>
+<div class="container mt-5">
+  <h2 class="mb-4">Service Desk Dashboard</h2>
+
+  <div class="row">
+
+    <div class="col-md-4 mb-4" *ngFor="let ticket of tickets">
+
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">{{ ticket.title }}</h5>
+
+          <span class="badge bg-primary mb-2">{{ ticket.status }}</span>
+
+          <p class="card-text text-muted">
+            {{ ticket.description }}
+          </p>
+
+          <button class="btn btn-outline-secondary btn-sm">View Details</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div *ngIf="tickets.length === 0" class="alert alert-info">
+    No tickets found. Great job!
+  </div>
+</div>
