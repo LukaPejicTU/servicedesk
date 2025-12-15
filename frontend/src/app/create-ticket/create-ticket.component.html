@@ -1,0 +1,46 @@
+<div class="container mt-5">
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <h2 class="mb-4">Create New Ticket</h2>
+
+      <form (ngSubmit)="onSubmit()">
+        <div class="mb-3"> <label class="form-label">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="e.g., Printer is broken"
+            name="title"
+            [(ngModel)]="ticket.title"
+          >
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Description</label>
+          <textarea
+            class="form-control"
+            rows="3"
+            placeholder="Describe the issue..."
+            name="description"
+            [(ngModel)]="ticket.description"
+          ></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Priority</label>
+          <select
+            class="form-select"
+            name="priority"
+            [(ngModel)]="ticket.priority"
+          >
+            <option value="LOW">Low</option>
+            <option value="MEDIUM">Medium</option>
+            <option value="HIGH">High</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Create Ticket</button>
+      </form>
+
+    </div>
+  </div>
+</div>

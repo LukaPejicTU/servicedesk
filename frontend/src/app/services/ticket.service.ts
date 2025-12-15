@@ -21,4 +21,8 @@ export class TicketService {
   getTickets(): Observable<Ticket[]> {
     return this.http.get<Ticket[]>(this.apiUrl);
   }
+
+  createTicket(ticketData: any): Observable<any> {
+    return this.http.post(this.apiUrl, ticketData);
+  }
 }
