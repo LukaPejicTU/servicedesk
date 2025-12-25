@@ -1,8 +1,10 @@
-<div class="login-container">
-  <h2>Login to ServiceDesk</h2>
+<div class="container mt-5">
+
+  <h2 class="mb-4">Login to ServiceDesk</h2>
   <div class="form-group">
     <label for="username">Username:</label>
     <input
+      class="form-control w-25"
       type="text"
       id="username"
       [(ngModel)]="username"
@@ -13,6 +15,7 @@
   <div class="form-group">
     <label for="password">Password:</label>
     <input
+      class="form-control w-25"
       type="password"
       id="password"
       [(ngModel)]="password"
@@ -20,5 +23,5 @@
     >
   </div>
 
-  <button (click)="onLogin()">Sign In</button>
+  <button class="btn btn-primary mt-2" (click)="onLogin()">Login</button>
 </div>
